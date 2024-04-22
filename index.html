@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Include Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="input.css" />
+    <link rel="stylesheet" href="normalize.css">
+
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>  <div class="md:contenido">
+    <!-- Sidebar start -->
+  
+    <div class="flex flex-col md:flex-row">
+    <nav class=" justify-center gap-x-4 gap-y-8 uppercase  md:flex md:flex-col md:justify-start md:pt-12">
+      <div id="" class="md:flex items-center">
+        <p
+          class="rounded-full border border-white py-2 px-4 active md:mr-5"
+          tabindex="0"
+          id="nav-sec-1"
+        >
+          1
+        </p>
+        <div class="flex flex-col">
+        <p class="hidden md:block font-extralight text-gray-400">Step 1</p>
+        <h3 class="hidden md:block font-bold tracking-wider">Your info</h3>
+      </div>
+      </div>
+      <div id="" class="md:flex items-center">
+        <p
+        class="rounded-full border border-white py-2 px-4 md:mr-5"
+          tabindex="0"
+          id="nav-sec-2"
+        >
+          2
+        </p>
+        <div class="flex flex-col">
+        <p class="hidden md:block font-extralight text-gray-400">Step 2</p>
+        <h3 class="hidden md:block font-bold tracking-wider">Select plan</h3></div>
+      </div>
+      <div class="md:flex items-center">
+        <p
+        class="rounded-full border border-white py-2 px-4 md:mr-5"
+          tabindex="0"
+          id="nav-sec-3"
+        >
+          3
+        </p>
+        <div class="flex flex-col">
+        <p class="hidden md:block font-extralight text-gray-400">Step 3</p>
+        <h3 class="hidden md:block font-bold tracking-wider">Add-ons</h3>
+        </div>
+      </div>
+      <div class="md:flex items-center">
+        <p
+        class="rounded-full border border-white py-2 px-4 md:mr-5"
+          tabindex="0"
+          id="nav-sec-4"
+        >
+          4
+        </p>
+        <div class="flex flex-col">
+        <p class="hidden md:block font-extralight text-gray-400">Step 4</p>
+        <h3 class="hidden md:block font-bold tracking-wider">Summary</h3>
+        </div>
+      </div>
+    </nav>
+    <!-- Sidebar end -->
+
+    <section class="step-1">
+      <!-- Step 1 start -->
+      <div
+        class="flex-col bg-white px-5 p-10 rounded-xl shadow-md -mt-40"
+        id="step-1-contenedor"
+      >
+        <h1 class="text-2xl text-blue-950 font-bold mb-4">Personal info</h1>
+        <p class="text-xl text-gray-400 mb-4">
+          Please provide your name, email address, and phone number.
+        </p>
+        <label class="flex justify-between items-center" for=""
+          >Name<small class="mr-3 text-red-600 hidden" id="nombre-error"
+            >This field is required</small
+          ></label
+        >
+        <input
+          class="border p-2 pr-24 mb-3"
+          type="email"
+          placeholder="e.g. Stephen King "
+          id="nombre"
+          required
+        />
+        <label class="flex justify-between items-center" for=""
+          >Email Address
+          <small class="mr-3 text-red-600 hidden" id="correo-error"
+            >This field is required</small
+          ></label
+        >
+        <input
+          class="border p-2 pr-24 mb-3"
+          type="text"
+          placeholder="e.g. stephenking@lorem.com Phone"
+          id="correo"
+          required
+        />
+        <label class="flex justify-between items-center" for=""
+          >Number
+          <small class="mr-3 text-red-600 hidden" id="telefono-error"
+            >This field is required</small
+          ></label
+        >
+        <input
+          class="border p-2 pr-24"
+          type="number"
+          placeholder="+1 234 567 890"
+          id="telefono"
+          required
+        />
+      </div>
+      <!-- Step 1 end -->
+
+      <!-- Step 2 start -->
+      <div
+        id="step-2-contenedor"
+        class="flex-col bg-white px-5 p-10 rounded-xl shadow-md -mt-20 hidden"
+      >
+        <h1 class="text-2xl text-blue-950 font-bold mb-4">Select your plan</h1>
+        <p class="text-lg text-gray-400 mb-8">
+          You have the option of monthly or yearly billing.
+        </p>
+        <div class="flex flex-col gap-y-4 mb-8" id="seccion-cambio">
+          <button
+            class="flex items-center border border-gray-500 p-4 rounded-xl focus:bg-gray-200" id="plan-arcade"
+          >
+            <img src="assets/images/icon-arcade.svg" alt="" />
+            <span class="flex flex-col items-start ml-3 text-blue-950 font-bold"
+              >Arcade <b class="text-gray-400 valor-plan">$9/mo</b
+              ><small class=" mes-gratis" id="mes-gratis-1"></small></span
+            >
+          </button>
+          <button
+            class="flex items-center border border-gray-500 p-4 rounded-xl  focus:bg-gray-200 focus-boton" id="plan-avanzado"
+          >
+
+
+            <img src="assets/images/icon-advanced.svg" alt="" />
+            <span class="flex flex-col items-start ml-3 text-blue-950 font-bold"
+              >Advanced <b class="text-gray-400 valor-plan" >$12/mo</b
+              ><small class="" id="mes-gratis-2"></small></span
+            >
+          </button>
+          <button
+            class="flex items-center border border-gray-500 p-4 rounded-xl focus-boton  focus:bg-gray-200" id="plan-pro"
+          >
+            <img src="assets/images/icon-pro.svg" alt="" />
+            <span class="flex flex-col items-start ml-3 text-blue-950 font-bold"
+              >Pro<b class="text-gray-400 valor-plan" >$15/mo</b
+              ><small class=" mes-gratis" id="mes-gratis-3"></small></span
+            >
+          </button>
+        </div>
+        <div class="flex gap-x-3 mt-3 justify-center">
+          <p class="font-bold" id="opcion-mes">Monthly</p>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider"id="toggle"></span>
+          </label>
+          <p class="font-bold" id="opcion-año">Yearly</p>
+        </div>
+      </div>
+      <!-- Step 2 end -->
+      <!-- Step 3 start -->
+      <div
+        id="step-3-contenedor"
+        class="flex-col bg-white px-5 p-10 rounded-xl shadow-md -mt-20 hidden"
+      >
+        <h1 class="text-2xl text-blue-950 font-bold mb-4">Pick add-ons</h1>
+        <p class="text-lg text-gray-400 mb-8">
+          Add-ons help enhance your gaming experience.
+        </p>
+        <div class="flex flex-col gap-y-4 mb-8">
+          <button
+            class="plan flex items-center border border-gray-500 p-4 rounded-xl focus-boton gap-x-4 focus:border-2 focus:border-purple-900"
+            id="plan-1"
+          >
+            <input
+              type="checkbox"
+              name=""
+              id="only-service"
+              class="size-6 accent-purple-900"
+            />
+            <div class="flex flex-col items-start">
+              <p class="font-bold text-sm">Online service</p>
+              <p class="text-xs">Access to multiplayer games</p>
+            </div>
+            <span class="text-sm ml-4" id="mes/año-1">+$1/mo</span>
+          </button>
+          <button
+            id="plan-2"
+            class="plan flex items-center border border-gray-500 p-4 rounded-xl focus-boton gap-x-4 focus:border-2 focus:border-purple-900"
+          >
+            <input
+              type="checkbox"
+              name=""
+              id="larger-storage"
+              class="size-6 accent-purple-900"
+            />
+            <div class="flex flex-col items-start">
+              <p class="font-bold text-sm">Larger storage</p>
+              <p class="text-xs">Extra 1TB of cloud save</p>
+            </div>
+            <span class="text-sm ml-10" id="mes/año-2">+$2/mo</span>
+          </button>
+          <button
+            id="plan-3"
+            class="plan flex items-center border border-gray-500 p-4 rounded-xl focus-boton gap-x-4 focus:border-2 focus:border-purple-900"
+          >
+            <input
+              type="checkbox"
+              name=""
+              id="customizable-profile"
+              class="size-6 accent-purple-900"
+            />
+            <div class="flex flex-col items-start">
+              <p class="font-bold text-sm">Customizable Profile</p>
+              <p class="text-xs">Custom theme on your profile</p>
+            </div>
+            <span class="text-sm" id="mes/año-3">+$2/mo</span>
+          </button>
+        </div>
+        <div></div>
+      </div>
+      <!-- Step 3 end -->
+      <!-- Step 4 start -->
+      <div
+        class="flex-col bg-white px-5 p-10 rounded-xl shadow-md -mt-20 hidden"
+        id="step-4-contenedor"
+      >
+        <h1 class="text-2xl text-blue-950 font-bold mb-4">Finishing up</h1>
+        <p class="text-lg text-gray-400 mb-8">
+          Double-check everything looks OK before confirming.
+        </p>
+        <article class="flex flex-col gap-y-4 mb-8 bg-gray-100 rounded-md p-4">
+          <div class="flex justify-between items-center pb-4 border-b">
+            <div class="">
+              <p class="text-blue-950 font-bold" id="plan_escogido">Arcade(<span class="mes-año">Monthly</span>)</p>
+              <a class="underline text-gray-500" href="#seccion-cambio">Change</a>
+            </div>
+            <span class="font-bold text-blue-950" id="precio-final-plan"></span>
+          </div>
+
+          <div class="flex justify-between items-center">
+            <p class="text-gray-900 font-bold hidden" id="nombre-only-services">Only services</p>
+            <span class="font-bold text-blue-950 hidden" id="precio-only-services">+$1/mo</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <p class="text-gray-500 font-bold nombre-plan hidden" id="nombre-larger-storage">Larger Storage</p>
+            <span class="font-bold text-blue-950 hidden" id="precio-larger-storage">+$2/mo</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <p class="text-gray-500 font-bold nombre-plan hidden" id="nombre-customizable-profile">customizable Profile</p>
+            <span class="font-bold text-blue-950 hidden" id="precio-customizable-profile">+$2/mo</span>
+          </div>
+        </article>
+        <div class="flex justify-between px-2">
+          <p class="text-gray-400 font-bold">Total (<span class="per-mes-año">per Month</span>)</p>
+          <p class="font-bold text-blue-950" id="precio-total">$+12/ <span id="final-año-mes"></span></p>
+        </div>
+        <!-- Dynamically add subscription and add-on selections here -->
+      </div>
+      <!-- Step 4 end -->
+      <!-- Step 5 start -->
+      <div
+        class="hidden flex-col items-center bg-white px-5 p-10 rounded-xl shadow-md -mt-40 gap-y-5 py-20 justify-center"
+        id="step-confirmacion"
+      >
+        <img class="size-16" src="assets/images/icon-thank-you.svg" alt="" />
+        <h2 class="text-2xl text-blue-950 font-bold">Thank you!</h2>
+        <p class="text-lg text-gray-400 text-center">
+          Thanks for confirming your subscription! We hope you have fun using
+          our platform. If you ever need support, please feel free to email us
+          at support@loremgaming.com.
+        </p>
+      </div>
+      <!-- Step 5 end -->
+
+      <div class="attribution hidden">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </section> </div>
+    <div class="flex justify-between px-7 py-4">
+      <button class="text-gray-400" id="boton-atras">Go Back</button>
+      <button
+        class="bg-blue-950 text-white p-3 rounded-md font-semibold"
+        id="boton-siguiente"
+      >
+        Next Step
+      </button>
+    </div>
+ 
+    <div class="hidden">
+      <button>Go Back</button>
+      <button>Next Step</button>
+    </div>
+  </div>
+    <!-- Step 4 start -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
