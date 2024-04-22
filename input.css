@@ -95,9 +95,11 @@ nav{
     }
 
     .step-1 input{
-        width: 100%;
+        
         padding: 1rem;
         margin: 1rem 0;
+        margin-right: 2rem;
+        margin-left: 1rem;
         border-radius: 10px;
         border: 2px solid var(--cool-gray);
     }
@@ -110,6 +112,7 @@ nav{
         width: 75vw;
         margin: 5rem;
     }
+
 }
 
 .step-1 label{
